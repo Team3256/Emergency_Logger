@@ -23,12 +23,14 @@
 
 
     <center><h1> Roborio Emergency Logs: </h1></center>
-    <div class="row" style="padding-left: 2%; padding-right: 2%; padding-top: 2%;">
+    <div class="row g-4"  style="padding-left: 2%; padding-right: 2%; padding-top: 2%;">
         {% for (key, log) in logs %}
             <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
-                    <h3 row row-cols-3>{{ key }}</h3>
-                    <p>{{ log }}</p>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ key }}</h3>
+                        <div class="card-text">{{ log }}</div>
+                    </div>
                 </div>
             </div>
         {% endfor %}
